@@ -11,12 +11,12 @@ def f_diff(x):
 def main():
     epsilon = 0.1 ** 16
     n = 0
-    WRITE = 0
+    WRITE = 1
 
     x = 0
     
     while True:
-        
+
         print("{}\t{}".format(n, x))
 
         if WRITE:
