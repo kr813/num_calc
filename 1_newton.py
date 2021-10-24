@@ -9,10 +9,6 @@ def f(x):
 def f_diff(x):
     return 2 * x + 2
 
-def display(n, xlist):
-    plt.plot(list(range(n+1)), xlist)
-    plt.show()
-
 def main():
     epsilon = 0.1 ** 16
     n = 0
@@ -36,7 +32,8 @@ def main():
         x_old = x
         x = x - f(x) / f_diff(x)
         if abs(x_old - x) < epsilon:
-            display(n, xlist)
+            plt.plot(list(range(n+1)), xlist)
+            plt.show()
             break
 
         n += 1
