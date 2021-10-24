@@ -18,7 +18,6 @@ def main():
     x = 0
     
     while True:
-
         print("{}\t{}".format(n, x))
         xlist.append(x)
 
