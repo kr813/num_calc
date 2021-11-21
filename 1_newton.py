@@ -3,11 +3,19 @@
 
 import matplotlib.pyplot as plt
 
+EQUATION = 1
+
 def f(x):
-    return x ** 2 + 2 * x - 1  # 手計算の解は√2 - 1, -1 - √2
+    if EQUATION == 1:
+        return x ** 2 + 2 * x - 1  # 手計算の解は√2 - 1, -1 - √2
+    elif EQUATION == 2:
+        return x
 
 def f_diff(x):
-    return 2 * x + 2
+    if EQUATION == 1:
+        return 2 * x + 2
+    elif EQUATION == 2:
+        return 1
 
 def main():
     epsilon = 0.1 ** 16
@@ -15,7 +23,7 @@ def main():
     WRITE = 1
     xlist = []
 
-    x = 0
+    x = -100
     
     while True:
         print("{}\t{}".format(n, x))

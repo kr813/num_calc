@@ -4,18 +4,23 @@
 
 import matplotlib.pyplot as plt
 
+EQUATION = 1
+
 def f(x):
-    return x ** 2 + 2 * x - 1  # 手計算の解は√2 - 1, -1 - √2
+    if EQUATION == 1:
+        return x ** 2 + 2 * x - 1  # 手計算の解は√2 - 1, -1 - √2
+    elif EQUATION == 2:
+        return x
 
 def main():
-    epsilon = 0.1 ** 6
+    epsilon = 0.1 ** 16
     n = 0
     c_old = 0.191
     WRITE = 1
     clist = []
     
-    a = 0.0
-    b = 5.0
+    a = -100.0
+    b = 100.0
 
     while True:
         c = (a + b) / 2
